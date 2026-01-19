@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { updateMetaTags } from '../utils/seo';
 
 const principles = [
   {
@@ -35,6 +36,12 @@ const PhilosophyPage: React.FC = () => {
   const [visiblePrinciples, setVisiblePrinciples] = useState<number[]>([]);
 
   useEffect(() => {
+    updateMetaTags({
+      title: 'Engineering Principles | The Fynnx',
+      description: 'Our work is guided by a small set of principles. They exist to ensure clarity, reliability, and long-term ownership.',
+      path: '/philosophy'
+    });
+
     setIsVisible(true);
 
     // Stagger principle appearances

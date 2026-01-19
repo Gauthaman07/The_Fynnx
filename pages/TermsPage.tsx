@@ -2,11 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { updateMetaTags } from '../utils/seo';
 
 const TermsPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    updateMetaTags({
+      title: 'Terms of Use | The Fynnx',
+      description: 'Terms of use for The Fynnx website and services.',
+      path: '/terms'
+    });
     setIsVisible(true);
   }, []);
 

@@ -2,11 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { updateMetaTags } from '../utils/seo';
 
 const PrivacyPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    updateMetaTags({
+      title: 'Privacy Policy | The Fynnx',
+      description: 'We respect your privacy and collect only the information necessary to communicate and deliver our services.',
+      path: '/privacy'
+    });
     setIsVisible(true);
   }, []);
 

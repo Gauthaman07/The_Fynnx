@@ -5,15 +5,15 @@ const ApproachSection: React.FC = () => {
   const pillars = [
     {
       title: "Discipline over shortcuts",
-      description: "We build with structure, not hacks. Our codebases are designed to be readable, maintainable, and robust from day one."
+      description: "Structure replaces guesswork.Every system is built to remain understandable and reliable over time."
     },
     {
       title: "Systems over features",
-      description: "Long-term thinking beats quick wins. We architect solutions that account for future complexity and integration needs."
+      description: "Features change. Systems endure.We design with growth, complexity, and integration in mind."
     },
     {
       title: "Longevity over speed",
-      description: "Software that survives growth. We don't ship 'minimum viable' debt; we ship engineered assets that stand the test of time."
+      description: "Fast delivery is meaningless without durability.We build assets meant to last."
     }
   ];
 

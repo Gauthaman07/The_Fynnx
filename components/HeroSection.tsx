@@ -33,24 +33,39 @@ const Hero: React.FC = () => {
         
         <h1 className="font-heading font-bold text-6xl md:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-10 max-w-5xl">
           SOFTWARE, <br />
-          <span className="text-brand-gray/20 outline-text">REFORGED.</span>
+          <span className="text-brand-gray/20 outline-text">BUILT TO LAST</span>
         </h1>
         
         <p className="max-w-xl text-lg md:text-xl text-brand-gray mb-12 leading-relaxed font-body font-normal">
-          We build disciplined software systems designed to scale, adapt, and last. Modern engineering for decision-makers who value longevity over hype.
+          Designed with structure and intent.
+Disciplined engineering, supported by AI.
+
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6">
-          <button className="group relative px-10 py-5 bg-brand-blue text-white font-heading font-semibold tracking-wide overflow-hidden transition-all active:scale-95">
-            <span className="relative z-10">Start a Project</span>
-            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </button>
-          <button className="px-10 py-5 border border-white/10 text-white font-heading font-semibold tracking-wide hover:bg-white/5 transition-all flex items-center gap-2 group">
+            <a
+  href="https://wa.me/917639530764?text=Hello%2C%20I%E2%80%99d%20like%20to%20discuss%20a%20software%20project.
+"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center w-full sm:w-auto px-12 py-6 bg-brand-blue text-white font-heading font-bold text-lg tracking-wide transition-all shadow-[0_0_30px_rgba(0,71,255,0.2)] hover:bg-brand-blue/90 hover:shadow-[0_0_40px_rgba(0,71,255,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
+>
+  Start a Project
+</a>
+          <a
+            href="/philosophy"
+            onClick={(e) => {
+              e.preventDefault();
+              window.history.pushState({}, '', '/philosophy');
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            }}
+            className="px-10 py-5 border border-white/10 text-white font-heading font-semibold tracking-wide hover:bg-white/5 transition-all flex items-center gap-2 group"
+          >
             Our Philosophy
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="group-hover:translate-x-1 transition-transform">
               <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="square"/>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
 

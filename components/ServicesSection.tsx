@@ -5,19 +5,19 @@ const ServicesSection: React.FC = () => {
   const services = [
     {
       title: "Custom Web Platforms",
-      desc: "High-performance enterprise systems built for complex business logic and secure data handling."
+      desc: "Complex, secure platforms designed to support real business logic, data integrity, and evolving operational needs."
     },
     {
       title: "Mobile Applications",
-      desc: "Robust cross-platform applications that prioritize native-level performance and user experience."
+      desc: "Cross-platform applications engineered for performance, consistency, and long-term maintainability."
     },
     {
       title: "Internal Tooling",
-      desc: "Custom-built dashboards and workflow automation that empower teams to move faster and more accurately."
+      desc: "Custom dashboards and automation that reduce operational friction and help teams work with clarity and accuracy."
     },
     {
       title: "Architecture & Scalability",
-      desc: "Backend systems and cloud infrastructures designed to handle traffic spikes and long-term growth."
+      desc: "Backend systems and cloud infrastructure designed to withstand growth, traffic variation, and future expansion."
     }
   ];
 
@@ -56,12 +56,12 @@ const ServicesSection: React.FC = () => {
                 {service.desc}
               </p>
               
-              <div className="mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              {/* <div className="mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <button className="text-xs uppercase tracking-widest font-bold text-brand-blue flex items-center gap-2">
                   Learn More 
                   <span className="w-4 h-px bg-brand-blue" />
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

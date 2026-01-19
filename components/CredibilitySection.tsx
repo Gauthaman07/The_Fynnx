@@ -3,10 +3,10 @@ import React from 'react';
 
 const CredibilitySection: React.FC = () => {
   const principles = [
-    { label: "01", title: "Architectural Rigor", text: "We plan deep before writing code. Our systems are built on math and logic, not guesses." },
-    { label: "02", title: "Debt Elimination", text: "Zero-tolerance for technical debt in critical paths. We fix problems permanently." },
-    { label: "03", title: "Deep Documentation", text: "Every system is documented for longevity, ensuring your team owns the outcome, not us." },
-    { label: "04", title: "Validated Delivery", text: "Exhaustive testing cycles and automated validation for every deployment." }
+    { label: "01", title: "Architectural Rigor", text: "Systems are planned before code is written. Decisions are based on structure and logic, not guesswork." },
+    { label: "02", title: "Debt Elimination", text: "Critical paths are designed to remain clean. Problems are addressed permanently, not deferred." },
+    { label: "03", title: "Deep Documentation", text: "Every system is documented for longevity, ensuring ownership remains with your team." },
+    { label: "04", title: "Validated Delivery", text: "Testing and validation are integral to every release, not an afterthought." }
   ];
 
   return (
@@ -18,7 +18,10 @@ const CredibilitySection: React.FC = () => {
             <h3 className="font-heading text-4xl md:text-5xl font-bold mb-8 text-white">Engineered for Reliability.</h3>
             
             <p className="text-xl text-brand-gray leading-relaxed mb-12 max-w-xl font-body">
-              Our engineering culture is built on transparency, discipline, and documentation. We don't ship "hacks"—we ship permanent assets.
+            Our engineering culture is built on clarity, discipline,
+and documentation. We design systems meant to be understood,
+maintained, and relied upon over time.
+
             </p>
 
             <div className="space-y-4">

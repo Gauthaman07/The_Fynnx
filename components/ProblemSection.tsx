@@ -3,9 +3,9 @@ import React from 'react';
 
 const ProblemSection: React.FC = () => {
   const problems = [
-    "Systems that break when your business grows",
-    "Developers who disappear halfway",
-    "Products rebuilt again and again"
+    "Systems that cannot scale beyond their initial use case",
+    "Projects slowed by unclear ownership and fragmented execution",
+    "Products that require repeated rebuilds to support growth"
   ];
 
   return (

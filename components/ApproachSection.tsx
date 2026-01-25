@@ -36,7 +36,7 @@ const ApproachSection: React.FC = () => {
        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-24 text-center md:text-left">
+        <div className="mb-8 text-center md:text-left">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,11 +56,11 @@ const ApproachSection: React.FC = () => {
         <div className="relative">
           {/* Connecting Line (Desktop: Horizontal, Mobile: Vertical) */}
           {/* Desktop Line Track */}
-          <div className="hidden md:block absolute top-[80px] left-0 w-full h-0.5 bg-white/10" />
+          <div className="hidden md:block absolute top-[48px] left-0 w-full h-0.5 bg-white/10" />
           {/* Desktop Line Fill */}
           <motion.div 
             style={{ scaleX: lineProgress, transformOrigin: "left" }}
-            className="hidden md:block absolute top-[80px] left-0 w-full h-0.5 bg-brand-blue shadow-[0_0_15px_rgba(59,130,246,0.5)] z-0" 
+            className="hidden md:block absolute top-[48px] left-0 w-full h-0.5 bg-brand-blue shadow-[0_0_15px_rgba(59,130,246,0.5)] z-0" 
           />
 
           {/* Mobile Line Track */}
@@ -90,10 +90,10 @@ const PipelineCard: React.FC<{ title: string; description: string; id: string; i
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ delay: index * 0.2, duration: 0.5 }}
-      className="group relative pl-24 md:pl-0 md:pt-32 h-full flex flex-col"
+      className="group relative pl-24 md:pl-0 md:pt-24 h-full flex flex-col"
     >
       {/* Node Point on the Line */}
-      <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 md:top-[72px] w-4 h-4 bg-neutral-900 border-2 border-brand-blue rounded-full z-20 group-hover:scale-150 group-hover:bg-brand-blue transition-all duration-300 shadow-[0_0_0_4px_rgba(0,0,0,1)]">
+      <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 md:top-[48px] w-4 h-4 bg-neutral-900 border-2 border-brand-blue rounded-full z-20 group-hover:scale-150 group-hover:bg-brand-blue transition-all duration-300 shadow-[0_0_0_4px_rgba(0,0,0,1)]">
         <div className="absolute inset-0 bg-brand-blue rounded-full animate-ping opacity-0 group-hover:opacity-100" />
       </div>
 

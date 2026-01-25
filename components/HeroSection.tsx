@@ -31,9 +31,17 @@ const Hero: React.FC = () => {
           <span className="text-[10px] uppercase tracking-widest font-mono text-brand-gray/50">Uptime: {uptime}%</span>
         </div>
         
-        <h1 className="font-heading font-bold text-6xl md:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-10 max-w-5xl">
+        <h1 className="font-heading font-bold text-6xl md:text-8xl lg:text-[9rem] leading-[0.85] tracking-tighter mb-10 max-w-5xl">
           SOFTWARE, <br />
-          <span className="glowing-outline">BUILT TO LAST</span>
+          <span className="relative inline-block">
+            {/* Base Layer (Dim) */}
+            <span className="base-outline">BUILT TO LAST</span>
+            
+            {/* Surge Layer (Bright Glow + Animation) */}
+            <span className="absolute top-0 left-0 surge-outline animate-surge" aria-hidden="true">
+              BUILT TO LAST
+            </span>
+          </span>
         </h1>
         
         <p className="max-w-xl text-lg md:text-xl text-brand-gray mb-12 leading-relaxed font-body font-normal">
@@ -77,20 +85,39 @@ Disciplined engineering, supported by AI.
       </div>
 
       <style>{`
-        @keyframes glow-pulse {
-          from {
-            filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) 
-                    drop-shadow(0 0 5px rgba(59, 130, 246, 0.4));
-          }
-          to {
-            filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1)) 
-                    drop-shadow(0 0 20px rgba(59, 130, 246, 0.8));
-          }
+        .base-outline {
+          -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+          color: transparent;
         }
-        .glowing-outline {
+
+        .surge-outline {
           -webkit-text-stroke: 2px #ffffff;
           color: transparent;
-          animation: glow-pulse 2s infinite alternate ease-in-out;
+          filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.8)) 
+                  drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
+          /* Mask: Linear gradient with a transparent gap in the middle to create the moving "band" */
+          mask-image: linear-gradient(
+            60deg,
+            transparent 20%,
+            black 40%,
+            black 60%,
+            transparent 80%
+          );
+          mask-size: 200% 100%;
+          mask-position: -100% 0;
+        }
+
+        @keyframes surge-anim {
+          0% {
+            mask-position: -50% 0;
+          }
+          100% {
+            mask-position: 150% 0;
+          }
+        }
+
+        .animate-surge {
+          animation: surge-anim 3s infinite linear;
         }
       `}</style>
     </section>

@@ -78,11 +78,10 @@ Disciplined engineering, supported by AI.
 
       <style>{`
         .glowing-outline {
-          -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+          -webkit-text-stroke: 2px #ffffff;
           color: transparent;
-          text-shadow: 
-            0 0 20px rgba(59, 130, 246, 0.4),
-            0 0 40px rgba(59, 130, 246, 0.2);
+          filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8)) 
+                  drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
         }
       `}</style>
     </section>

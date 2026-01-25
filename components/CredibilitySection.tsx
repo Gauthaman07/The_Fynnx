@@ -26,7 +26,7 @@ maintained, and relied upon over time.
 
             <div className="space-y-4">
               {principles.map((p, i) => (
-                <div key={i} className="group p-6 border border-white/5 bg-brand-charcoal/20 hover:border-brand-blue/30 transition-all cursor-default">
+                <div key={i} className="group p-6 border border-white/10 bg-white/[0.07] backdrop-blur-sm hover:bg-white/[0.12] hover:border-brand-blue/50 transition-all duration-300 cursor-default rounded-lg">
                   <div className="flex items-start gap-6">
                     <span className="text-brand-blue font-mono text-xs pt-1">{p.label}</span>
                     <div>

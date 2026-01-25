@@ -90,7 +90,7 @@ const PipelineCard: React.FC<{ title: string; description: string; id: string; i
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ delay: index * 0.2, duration: 0.5 }}
-      className="group relative pl-24 md:pl-0 md:pt-32"
+      className="group relative pl-24 md:pl-0 md:pt-32 h-full flex flex-col"
     >
       {/* Node Point on the Line */}
       <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 md:top-[72px] w-4 h-4 bg-neutral-900 border-2 border-brand-blue rounded-full z-20 group-hover:scale-150 group-hover:bg-brand-blue transition-all duration-300 shadow-[0_0_0_4px_rgba(0,0,0,1)]">
@@ -98,14 +98,14 @@ const PipelineCard: React.FC<{ title: string; description: string; id: string; i
       </div>
 
       {/* Card Content */}
-      <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300 hover:-translate-y-2">
+      <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
         <div className="text-4xl font-mono font-bold text-white/10 absolute top-4 right-6 pointer-events-none group-hover:text-white/20 transition-colors">
           {id}
         </div>
         <h3 className="font-heading text-xl font-bold mb-4 text-white group-hover:text-brand-blue transition-colors">
           {title}
         </h3>
-        <p className="text-zinc-400 leading-relaxed text-sm">
+        <p className="text-zinc-400 leading-relaxed text-sm flex-grow">
           {description}
         </p>
       </div>

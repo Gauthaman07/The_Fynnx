@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center px-6 md:px-12 lg:px-24 bg-grid overflow-hidden">
+    <section className="relative h-screen w-full flex flex-col justify-center px-6 md:px-12 lg:px-24 bg-grid overflow-hidden pt-20 md:pt-32">
       {/* Background gradients for subtle depth */}
       <div className="absolute inset-0 bg-gradient-to-tr from-brand-black via-brand-black to-brand-blue/5 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-brand-black to-transparent pointer-events-none" />

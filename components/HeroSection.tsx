@@ -77,11 +77,20 @@ Disciplined engineering, supported by AI.
       </div>
 
       <style>{`
+        @keyframes glow-pulse {
+          from {
+            filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) 
+                    drop-shadow(0 0 5px rgba(59, 130, 246, 0.4));
+          }
+          to {
+            filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1)) 
+                    drop-shadow(0 0 20px rgba(59, 130, 246, 0.8));
+          }
+        }
         .glowing-outline {
           -webkit-text-stroke: 2px #ffffff;
           color: transparent;
-          filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8)) 
-                  drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
+          animation: glow-pulse 2s infinite alternate ease-in-out;
         }
       `}</style>
     </section>

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const navigateTo = (path: string) => {
   window.history.pushState({}, '', path);
@@ -7,7 +6,15 @@ const navigateTo = (path: string) => {
 };
 
 const Navigation: React.FC = () => {
-  const isPhilosophyPage = window.location.pathname === '/philosophy';
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPhilosophyPage, setIsPhilosophyPage] = useState(false);
+
+  useEffect(() => {
+    const checkPath = () => setIsPhilosophyPage(window.location.pathname === '/philosophy');
+    checkPath();
+    window.addEventListener('popstate', checkPath);
+    return () => window.removeEventListener('popstate', checkPath);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-brand-black/80 backdrop-blur-md">
@@ -21,8 +28,10 @@ const Navigation: React.FC = () => {
           className="flex items-center gap-2 cursor-pointer"
         >
           <div className="w-1.5 h-1.5 bg-brand-red rounded-full" />
-          <span className="font-heading font-bold tracking-tight text-xl">THE FYNNX</span>
+          <span className="font-heading font-bold tracking-tight text-xl text-white">THE FYNNX</span>
         </a>
+
+        {/* Desktop Menu */}
         <div className="hidden md:flex gap-10 text-sm font-medium text-brand-gray">
           {isPhilosophyPage ? (
             <a
@@ -52,15 +61,48 @@ const Navigation: React.FC = () => {
             Principles
           </a>
         </div>
-        <a
-          href="https://wa.me/917639530764?text=Hello%2C%20I%E2%80%99d%20like%20to%20discuss%20a%20software%20project."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 border border-white/10 text-sm hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all"
+
+        <button 
+          onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+          className="hidden md:block px-6 py-2.5 bg-white text-black font-heading font-bold text-sm tracking-wide hover:bg-zinc-200 transition-colors rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)]"
         >
-          Contact
-        </a>
+          Let's Talk
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-white"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-brand-black border-b border-white/5 p-6 flex flex-col gap-6 shadow-2xl">
+          <a href="#approach" className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
+          <a href="#services" className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+          <a href="/philosophy" className="text-white font-medium" onClick={() => { setIsMobileMenuOpen(false); navigateTo('/philosophy'); }}>Principles</a>
+          <button 
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="px-6 py-3 bg-white text-black font-bold rounded-full text-center"
+          >
+            Let's Talk
+          </button>
+        </div>
+      )}
     </nav>
   );
 };

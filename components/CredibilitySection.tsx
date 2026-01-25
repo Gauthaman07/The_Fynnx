@@ -10,7 +10,7 @@ const CredibilitySection: React.FC = () => {
   ];
 
   return (
-    <section id="principles" className="py-32 px-6 md:px-12 lg:px-24 border-t border-white/5">
+    <section id="principles" className="py-32 px-6 md:px-12 lg:px-24 border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-24 items-center">
           <div className="lg:w-1/2">
@@ -39,46 +39,58 @@ maintained, and relied upon over time.
             </div>
           </div>
 
-          <div className="lg:w-1/2 relative">
-            {/* Engineered Visualization Placeholder */}
-            <div className="aspect-square bg-brand-charcoal border border-white/5 relative flex items-center justify-center overflow-hidden">
-               <div className="absolute inset-0 bg-grid opacity-10" />
-               
-               {/* Abstract Process Diagram SVG */}
-               <svg width="300" height="300" viewBox="0 0 300 300" className="relative z-10 opacity-60">
-                 <rect x="110" y="20" width="80" height="40" stroke="#0047FF" strokeWidth="2" fill="none" />
-                 <path d="M150 60 V100" stroke="#0047FF" strokeWidth="1" strokeDasharray="4 4" />
-                 
-                 <rect x="50" y="100" width="80" height="40" stroke="white" strokeWidth="1" fill="none" opacity="0.5" />
-                 <rect x="170" y="100" width="80" height="40" stroke="white" strokeWidth="1" fill="none" opacity="0.5" />
-                 
-                 <path d="M150 100 L90 100 V120 M150 100 L210 100 V120" stroke="white" strokeWidth="1" opacity="0.3" />
-                 
-                 <circle cx="90" cy="180" r="30" stroke="#0047FF" strokeWidth="1" fill="none" />
-                 <circle cx="210" cy="180" r="30" stroke="#FF3B30" strokeWidth="1" fill="none" />
-                 
-                 <path d="M90 210 V250 H210 V210" stroke="white" strokeWidth="1" opacity="0.2" fill="none" />
-                 
-                 <text x="150" y="280" textAnchor="middle" fill="#888888" fontSize="10" fontFamily="monospace" letterSpacing="2">SYSTEM_FLOW_VERIFIED</text>
-               </svg>
+          <div className="lg:w-1/2 w-full flex justify-center perspective-1000">
+             {/* Holographic Core Container */}
+             <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] flex items-center justify-center">
+                
+                {/* HUD Elements */}
+                <div className="absolute top-0 left-0 p-4 border-l-2 border-brand-blue/50 z-10">
+                   <p className="text-[10px] font-mono text-brand-blue uppercase tracking-widest font-bold animate-pulse">System Core Online</p>
+                   <p className="text-[9px] font-mono text-brand-gray/50 uppercase">v2.0.4 - Stability 99.9%</p>
+                </div>
+                <div className="absolute bottom-0 right-0 p-2 border-b-2 border-r-2 border-brand-red/30 z-10">
+                   <p className="text-[9px] font-mono text-brand-red uppercase tracking-widest">Live Monitoring</p>
+                </div>
 
-               <div className="absolute top-10 left-10 p-4 border-l border-brand-red/50">
-                  <p className="text-[10px] font-mono text-brand-red uppercase tracking-widest font-bold">Critical Path Analysis</p>
-                  <p className="text-[9px] font-mono text-brand-gray/50 uppercase">v0.9.4.82</p>
-               </div>
-            </div>
-            
-            <div className="mt-8 flex items-center justify-between px-2">
-              <div className="flex gap-4">
-                <div className="w-2 h-2 rounded-full bg-brand-blue" />
-                <div className="w-2 h-2 rounded-full bg-brand-gray/20" />
-                <div className="w-2 h-2 rounded-full bg-brand-gray/20" />
-              </div>
-              <span className="text-[10px] font-mono text-brand-gray tracking-widest uppercase">Methodology Visualization</span>
-            </div>
+                {/* Background Glow */}
+                <div className="absolute inset-0 bg-brand-blue/5 blur-[80px] rounded-full" />
+
+                {/* Rotating Cube Group */}
+                <div className="relative w-32 h-32 md:w-48 md:h-48 transform-style-3d animate-[spin_10s_linear_infinite]">
+                  {/* Cube Faces */}
+                  <div className="absolute inset-0 border border-brand-blue/50 bg-brand-blue/10 translate-z-[64px] md:translate-z-[96px] shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  <div className="absolute inset-0 border border-brand-blue/50 bg-brand-blue/10 -translate-z-[64px] md:-translate-z-[96px] shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  <div className="absolute inset-0 border border-brand-blue/50 bg-brand-blue/10 rotate-y-90 translate-z-[64px] md:translate-z-[96px] shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  <div className="absolute inset-0 border border-brand-blue/50 bg-brand-blue/10 rotate-y-90 -translate-z-[64px] md:-translate-z-[96px] shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  <div className="absolute inset-0 border border-brand-blue/50 bg-brand-blue/10 rotate-x-90 translate-z-[64px] md:translate-z-[96px] shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  <div className="absolute inset-0 border border-brand-blue/50 bg-brand-blue/10 rotate-x-90 -translate-z-[64px] md:-translate-z-[96px] shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
+                  
+                  {/* Inner Solid Core */}
+                  <div className="absolute inset-8 border border-white/50 bg-white/5 translate-z-0 shadow-[0_0_30px_rgba(255,255,255,0.2)]" />
+                </div>
+
+                {/* Gyroscopic Rings */}
+                <div className="absolute w-56 h-56 md:w-72 md:h-72 border border-brand-blue/30 rounded-full animate-[spin_7s_linear_infinite_reverse]" style={{ transform: 'rotateX(60deg)' }} />
+                <div className="absolute w-64 h-64 md:w-80 md:h-80 border border-dashed border-brand-red/30 rounded-full animate-[spin_15s_linear_infinite]" style={{ transform: 'rotateY(60deg)' }} />
+                
+             </div>
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        .translate-z-\\[64px\\] { transform: translateZ(64px); }
+        .-translate-z-\\[64px\\] { transform: translateZ(-64px); }
+        .rotate-y-90 { transform: rotateY(90deg); }
+        .rotate-x-90 { transform: rotateX(90deg); }
+        /* MD Breakpoint Z translations */
+        @media (min-width: 768px) {
+          .md\\:translate-z-\\[96px\\] { transform: translateZ(96px); }
+          .md\\:-translate-z-\\[96px\\] { transform: translateZ(-96px); }
+        }
+      `}</style>
     </section>
   );
 };

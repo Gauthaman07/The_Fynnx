@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         
         <h1 className="font-heading font-bold text-6xl md:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-10 max-w-5xl">
           SOFTWARE, <br />
-          <span className="text-brand-gray/20 outline-text">BUILT TO LAST</span>
+          <span className="glowing-outline">BUILT TO LAST</span>
         </h1>
         
         <p className="max-w-xl text-lg md:text-xl text-brand-gray mb-12 leading-relaxed font-body font-normal">
@@ -77,9 +77,12 @@ Disciplined engineering, supported by AI.
       </div>
 
       <style>{`
-        .outline-text {
-          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+        .glowing-outline {
+          -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
           color: transparent;
+          text-shadow: 
+            0 0 20px rgba(59, 130, 246, 0.4),
+            0 0 40px rgba(59, 130, 246, 0.2);
         }
       `}</style>
     </section>

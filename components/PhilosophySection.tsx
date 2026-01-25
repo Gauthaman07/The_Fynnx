@@ -1,10 +1,17 @@
 
 import React from 'react';
+import bgImage from '../assets/bg.jpg';
 
 const PhilosophySection: React.FC = () => {
   return (
-    <section className="py-64 px-6 md:px-12 lg:px-24 bg-brand-charcoal relative overflow-hidden">
-      {/* Subtle geometric pattern in background */}
+    <section 
+      className="py-64 px-6 md:px-12 lg:px-24 bg-brand-charcoal relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/60 pointer-events-none" />
+
+      {/* Subtle geometric pattern in background - kept but might be less visible under overlay */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-red/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/2 translate-y-1/2" />
 

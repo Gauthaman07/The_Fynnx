@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
 import ApproachSection from './components/ApproachSection';
 import ServicesSection from './components/ServicesSection';
+import TechStackSection from './components/TechStackSection';
 import CredibilitySection from './components/CredibilitySection';
 import PhilosophySection from './components/PhilosophySection';
 import FinalCTA from './components/FinalCTA';
@@ -53,6 +54,7 @@ const App: React.FC = () => {
         <ProblemSection />
         <ApproachSection />
         <ServicesSection />
+        <TechStackSection />
         <CredibilitySection />
         <PhilosophySection />
         <FinalCTA />

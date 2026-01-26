@@ -25,7 +25,7 @@ const ProblemSection: React.FC = () => {
     <section className="relative bg-brand-black py-24 px-4 md:px-8 lg:px-12 min-h-screen border-t border-white/5">
       <div className="max-w-6xl mx-auto">
         {/* Sticky Header */}
-        <div className="mb-24">
+        <div className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.4em] text-brand-red font-bold pl-2 border-l-2 border-brand-red">
             When Software Becomes a Liability
           </h2>

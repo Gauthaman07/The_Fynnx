@@ -37,31 +37,31 @@ const ServicesSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
-            <div key={index} className="bg-brand-black p-12 md:p-16 hover:bg-brand-charcoal transition-all duration-500 group relative">
-              <div className="absolute top-0 right-0 w-24 h-24 pointer-events-none overflow-hidden opacity-5">
+            <div key={index} className="bg-brand-black/50 p-12 md:p-16 border border-white/5 group relative overflow-hidden transition-all duration-500 hover:border-brand-blue/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:-translate-y-2 hover:bg-brand-blue/[0.02]">
+              
+              {/* Background Grid (Subtle) */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="absolute top-0 right-0 w-24 h-24 pointer-events-none overflow-hidden opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                  <div className="absolute top-0 right-0 w-full h-full border-t border-r border-brand-blue" />
               </div>
               
-              <span className="text-brand-blue font-mono text-xs mb-8 block font-medium opacity-50 group-hover:opacity-100 transition-opacity">
+              <span className="text-brand-blue font-mono text-xs mb-8 block font-medium opacity-50 group-hover:opacity-100 group-hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition-all duration-300 w-fit">
                 SYSTEM_PROTO_0{index + 1}
               </span>
               
-              <h4 className="font-heading text-2xl md:text-3xl font-bold mb-6 text-white group-hover:translate-x-2 transition-transform duration-300">
+              <h4 className="font-heading text-2xl md:text-3xl font-bold mb-6 text-white group-hover:text-brand-blue transition-colors duration-300">
                 {service.title}
               </h4>
               
-              <p className="text-brand-gray leading-relaxed text-lg font-body max-w-sm">
+              <p className="text-brand-gray leading-relaxed text-lg font-body max-w-sm relative z-10">
                 {service.desc}
               </p>
-              
-              {/* <div className="mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <button className="text-xs uppercase tracking-widest font-bold text-brand-blue flex items-center gap-2">
-                  Learn More 
-                  <span className="w-4 h-px bg-brand-blue" />
-                </button>
-              </div> */}
+
+              {/* Bottom Right Tech Corner Accent */}
+              <div className="absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>

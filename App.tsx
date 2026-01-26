@@ -7,6 +7,7 @@ import ServicesSection from './components/ServicesSection';
 import TechStackSection from './components/TechStackSection';
 import CredibilitySection from './components/CredibilitySection';
 import PhilosophySection from './components/PhilosophySection';
+import DeploymentLog from './components/DeploymentLog';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
@@ -57,6 +58,7 @@ const App: React.FC = () => {
         <TechStackSection />
         <CredibilitySection />
         <PhilosophySection />
+        <DeploymentLog />
         <FinalCTA />
       </main>
 

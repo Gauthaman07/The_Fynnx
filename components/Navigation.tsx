@@ -62,12 +62,14 @@ const Navigation: React.FC = () => {
           </a>
         </div>
 
-        <button 
-          onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+        <a 
+          href="https://api.whatsapp.com/send/?phone=917639530764&text=Hello%2C+I%E2%80%99d+like+to+discuss+a+software+project.&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:block px-6 py-2.5 bg-white text-black font-heading font-bold text-sm tracking-wide hover:bg-zinc-200 transition-colors rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)]"
         >
           Let's Talk
-        </button>
+        </a>
 
         {/* Mobile Menu Button */}
         <button 
@@ -92,15 +94,15 @@ const Navigation: React.FC = () => {
           <a href="#approach" className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
           <a href="#services" className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
           <a href="/philosophy" className="text-white font-medium" onClick={() => { setIsMobileMenuOpen(false); navigateTo('/philosophy'); }}>Principles</a>
-          <button 
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+          <a 
+            href="https://api.whatsapp.com/send/?phone=917639530764&text=Hello%2C+I%E2%80%99d+like+to+discuss+a+software+project.&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="px-6 py-3 bg-white text-black font-bold rounded-full text-center"
           >
             Let's Talk
-          </button>
+          </a>
         </div>
       )}
     </nav>

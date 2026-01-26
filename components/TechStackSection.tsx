@@ -43,12 +43,13 @@ const TechStackSection: React.FC = () => {
     <section className="py-32 px-6 md:px-12 lg:px-24 bg-brand-black border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
-          <h2 className="text-xs uppercase tracking-[0.4em] text-brand-gray font-medium mb-6">THE ELEMENTS</h2>
+          <h2 className="text-xs uppercase tracking-[0.4em] text-brand-gray font-medium mb-6">THE FUNDAMENTALS</h2>
           <h3 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
-            The Scientific Method.
+           First Principles, Not Frameworks
           </h3>
           <p className="text-brand-gray max-w-2xl mx-auto text-lg">
-            We don't pick tools based on hype. We select the fundamental elements best suited for stability, scale, and performance.
+            "Great software isn't magic; it's the right reaction between powerful elements. We combine the best technologies to create
+     systems that are greater than the sum of their parts
           </p>
         </div>
 

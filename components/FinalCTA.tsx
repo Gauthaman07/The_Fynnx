@@ -20,9 +20,9 @@ const FinalCTA: React.FC = () => {
             Start a Project
           </a>
 
-          {/* <a href="mailto:hello@thefynnx.com" className="text-brand-gray hover:text-white transition-colors underline underline-offset-8 font-medium">
-            Contact Engineering
-          </a> */}
+          <a href="/philosophy" className="text-brand-gray hover:text-white transition-colors underline underline-offset-8 font-medium">
+            Our Engineering Principles
+          </a>
         </div>
 
         <p className="mt-12 text-sm text-brand-gray/50 font-mono tracking-widest uppercase">

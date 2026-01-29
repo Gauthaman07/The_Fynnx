@@ -44,9 +44,9 @@ const TechStackSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
           <h2 className="text-xs uppercase tracking-[0.4em] text-brand-gray font-medium mb-6">THE FUNDAMENTALS</h2>
-          <h3 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+          <p className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
            First Principles, Not Frameworks
-          </h3>
+          </p>
           <p className="text-brand-gray max-w-2xl mx-auto text-lg">
             "Great software isn't magic; it's the right reaction between powerful elements. We combine the best technologies to create
      systems that are greater than the sum of their parts

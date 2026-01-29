@@ -163,14 +163,19 @@ const PhilosophyPage: React.FC = () => {
               "We don't just build software.<br />
               <span className="text-brand-gray">We build assets."</span>
             </p>
-             <a
-              href="https://api.whatsapp.com/send/?phone=917639530764&text=Hello%2C+I%E2%80%99d+like+to+discuss+a+software+project.&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-12 py-6 bg-white text-black font-heading font-bold text-lg tracking-wide transition-all hover:bg-zinc-200 rounded-full"
-            >
-              Start a Project
-            </a>
+             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a
+                href="https://api.whatsapp.com/send/?phone=917639530764&text=Hello%2C+I%E2%80%99d+like+to+discuss+a+software+project.&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-12 py-6 bg-white text-black font-heading font-bold text-lg tracking-wide transition-all hover:bg-zinc-200 rounded-full"
+              >
+                Start a Project
+              </a>
+              <a href="/#services" className="text-brand-gray hover:text-white transition-colors underline underline-offset-8 font-medium">
+                Explore our services
+              </a>
+            </div>
           </div>
         </section>
       </main>

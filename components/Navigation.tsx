@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-10 text-sm font-medium text-brand-gray">
-          {isPhilosophyPage ? (
+          {isPhilosophyPage && (
             <a
               href="/"
               onClick={(e) => {
@@ -44,12 +44,9 @@ const Navigation: React.FC = () => {
             >
               Home
             </a>
-          ) : (
-            <>
-              <a href="#approach" className="hover:text-white transition-colors">Approach</a>
-              <a href="#services" className="hover:text-white transition-colors">Services</a>
-            </>
           )}
+          <a href={isPhilosophyPage ? '/#approach' : '#approach'} className="hover:text-white transition-colors">Approach</a>
+          <a href={isPhilosophyPage ? '/#services' : '#services'} className="hover:text-white transition-colors">Services</a>
           <a
             href="/philosophy"
             onClick={(e) => {
@@ -91,8 +88,8 @@ const Navigation: React.FC = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-brand-black border-b border-white/5 p-6 flex flex-col gap-6 shadow-2xl">
-          <a href="#approach" className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
-          <a href="#services" className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+          <a href={isPhilosophyPage ? '/#approach' : '#approach'} className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Approach</a>
+          <a href={isPhilosophyPage ? '/#services' : '#services'} className="text-white font-medium" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
           <a href="/philosophy" className="text-white font-medium" onClick={() => { setIsMobileMenuOpen(false); navigateTo('/philosophy'); }}>Principles</a>
           <a 
             href="https://api.whatsapp.com/send/?phone=917639530764&text=Hello%2C+I%E2%80%99d+like+to+discuss+a+software+project.&type=phone_number&app_absent=0"

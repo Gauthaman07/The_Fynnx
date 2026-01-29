@@ -27,9 +27,9 @@ const ServicesSection: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-xs uppercase tracking-[0.4em] text-brand-gray font-medium mb-6">WHAT WE BUILD</h2>
-            <h3 className="font-heading text-4xl md:text-6xl font-bold text-white leading-tight">
+            <p className="font-heading text-4xl md:text-6xl font-bold text-white leading-tight">
               Precise solutions for <br />critical infrastructure.
-            </h3>
+            </p>
           </div>
           <div className="hidden lg:block pb-2">
              <div className="w-12 h-[1px] bg-brand-blue mb-4" />
@@ -52,9 +52,9 @@ const ServicesSection: React.FC = () => {
                 SYSTEM_PROTO_0{index + 1}
               </span>
               
-              <h4 className="font-heading text-2xl md:text-3xl font-bold mb-6 text-white group-hover:text-brand-blue transition-colors duration-300">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold mb-6 text-white group-hover:text-brand-blue transition-colors duration-300">
                 {service.title}
-              </h4>
+              </h3>
               
               <p className="text-brand-gray leading-relaxed text-lg font-body max-w-sm relative z-10">
                 {service.desc}

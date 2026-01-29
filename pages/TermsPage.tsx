@@ -11,7 +11,8 @@ const TermsPage: React.FC = () => {
     updateMetaTags({
       title: 'Terms of Use | The Fynnx',
       description: 'Terms of use for The Fynnx website and services.',
-      path: '/terms'
+      path: '/terms',
+      robots: 'noindex, follow'
     });
     setIsVisible(true);
   }, []);

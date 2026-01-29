@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /philosophy
+
+Disallow: /privacy
+Disallow: /terms
+
+Sitemap: https://thefynnx.com/sitemap.xml

@@ -15,7 +15,7 @@ const CredibilitySection: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-24 items-center">
           <div className="lg:w-1/2">
             <h2 className="text-xs uppercase tracking-[0.4em] text-brand-gray font-medium mb-6">CREDIBILITY</h2>
-            <h3 className="font-heading text-4xl md:text-5xl font-bold mb-8 text-white">Engineered for Reliability.</h3>
+            <p className="font-heading text-4xl md:text-5xl font-bold mb-8 text-white">Engineered for Reliability.</p>
             
             <p className="text-xl text-brand-gray leading-relaxed mb-12 max-w-xl font-body">
             Our engineering culture is built on clarity, discipline,
@@ -30,7 +30,7 @@ maintained, and relied upon over time.
                   <div className="flex items-start gap-6">
                     <span className="text-brand-blue font-mono text-xs pt-1">{p.label}</span>
                     <div>
-                      <h4 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-brand-blue transition-colors">{p.title}</h4>
+                      <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-brand-blue transition-colors">{p.title}</h3>
                       <p className="text-brand-gray text-sm leading-relaxed">{p.text}</p>
                     </div>
                   </div>

@@ -11,7 +11,8 @@ const PrivacyPage: React.FC = () => {
     updateMetaTags({
       title: 'Privacy Policy | The Fynnx',
       description: 'We respect your privacy and collect only the information necessary to communicate and deliver our services.',
-      path: '/privacy'
+      path: '/privacy',
+      robots: 'noindex, follow'
     });
     setIsVisible(true);
   }, []);

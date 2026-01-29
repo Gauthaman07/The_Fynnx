@@ -3,9 +3,10 @@ interface SEOProps {
   title: string;
   description: string;
   path?: string;
+  robots?: string;
 }
 
-export const updateMetaTags = ({ title, description, path = '' }: SEOProps) => {
+export const updateMetaTags = ({ title, description, path = '', robots = 'index, follow' }: SEOProps) => {
   const baseUrl = 'https://thefynnx.com';
   const fullUrl = `${baseUrl}${path}`;
 
@@ -16,6 +17,7 @@ export const updateMetaTags = ({ title, description, path = '' }: SEOProps) => {
   const metaUpdates: Record<string, string> = {
     'meta[name="title"]': title,
     'meta[name="description"]': description,
+    'meta[name="robots"]': robots,
     'meta[property="og:title"]': title,
     'meta[property="og:description"]': description,
     'meta[property="og:url"]': fullUrl,

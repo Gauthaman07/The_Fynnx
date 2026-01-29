@@ -135,14 +135,14 @@ const PhilosophySection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/50 shadow-2xl ring-1 ring-slate-900/5"
+          className="bg-white/80 backdrop-blur-sm p-8 md:p-12"
         >
           <blockquote className="space-y-6">
             <p className="font-heading font-black text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-slate-900 tracking-tight">
-              We don’t chase trends.
+              Software that outlives the roadmap
             </p>
             <p className="font-heading font-medium text-2xl md:text-4xl text-slate-500">
-              We engineer what survives them.
+              it was built for.
             </p>
           </blockquote>
         </motion.div>

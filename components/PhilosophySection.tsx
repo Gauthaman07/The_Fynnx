@@ -120,7 +120,7 @@ const PhilosophySection: React.FC = () => {
     <section 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative mx-4 md:mx-10 my-24 h-[600px] bg-white rounded-[3rem] overflow-hidden flex items-center justify-center shadow-sm border border-slate-100"
+      className="relative my-24 h-[600px] bg-white overflow-hidden flex items-center justify-center shadow-sm border border-slate-100"
     >
       {/* Canvas for "Trend Lines" */}
       <canvas 
